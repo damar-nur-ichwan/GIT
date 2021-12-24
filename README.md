@@ -92,7 +92,7 @@ Contoh:
 * ```git revert <Hash>``` : mengembalikan repository ke versi sebelumnya sesuai Hash yang dimasukkan, dengan cara menambah commit. Sehingga history commit tetap aman. Ini adalah keblikan dari reset.
 
 
-# GIT - MATERI BRANCING
+# GIT BRANCE
 ## Penggunaan
 * saat ragu dalam menambah/mengubah fitur yang masih belum yakin implementasinya
 * saat mengerjakan proyek secara team
