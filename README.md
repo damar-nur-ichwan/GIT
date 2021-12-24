@@ -1,4 +1,4 @@
-# GIT
+# GIT - MATERI DASAR
 ## Pengertian
 Git adalah salah satu software version control yang menerapkan konsep DVCS (Distributed Version Control System).
 ## Cara Kerja
@@ -35,6 +35,35 @@ Git menerapkan arsitektur _Three Tree_ yaitu terdiri dari:
 2. Arahkan GIT Bash ke directory dari proyek
 3. Ketik ```git init```, kemudian **Enter**. Maka, GIT akan otomatis membuat Repository baru dari proyek, yaitu dengan cara membuat file **.git** di dalam folder proyek
 
+## Mengabaikan Perubahan yang Terjadi pada File Tertentu
+1. Buat file dengan nama **.gitignore**
+2. Isi file tersebut dengan nama file atau folder directory yang ingin diabaikan setiap perubahannya. 
+    Contoh:
+    ```
+    # Ignore folder log
+    log/
+    
+    # Ignore semua file dengan extension .backup
+    *.backup
+    
+    # Ignore file tertentu
+    hasil_kompilasi.txt
+    ```
+## Membuat Alias
+```
+git config --global alias.<alias_yang_diinginkan> <perintah_defaultnya>
+```
+Contoh: 
+1. 'commit' menjadi cukup diketik 'com'
+    ```
+    git config --global alias.com commit
+    ```
+2. 'log --oneline' menjadi cukup diketik 'logline'
+    ```
+    git config --global alian.logline "log --oneline"
+    ```  
+
+
 ## Kode-kode Perintah Lain dalam Git:
 * ```git add <nama_file>.<format_file>``` : untuk memasukkan file dari Working Directory ke Staging Area
 * ```git commit -m "<informasi mengenai perubahan apa saja yang dilakukan>"``` : untuk menyimpan seluruh file dari Staging Area ke Repository
@@ -45,6 +74,7 @@ Git menerapkan arsitektur _Three Tree_ yaitu terdiri dari:
 * ```git log``` : melihat seluruh history commit pada Repository (Hash, Author, Message)
 * ```git log --oneline``` : melihat seluruh history commit pada Repository secara sederhana (Hash, Message)
 * ```git log --oneline --graph``` : melihat seluruh history commit pada Repository secara sederhana beserta history **Branch**-nya (Hash, Message, Grafik Branching)
+* ```git blame <nama_file>.<format_file>``` : melihat history commit pada file tertentu beserta nama user yang melakukannya.
 * ```git show <Hash>``` : melihat detail perubahan dari commit tertentu
 * ```git show HEAD``` : melihat detail dari commit terakhir
 * ```git diff <Hash_1> <Hash_2>``` : membandingkan antar commit
@@ -53,3 +83,16 @@ Git menerapkan arsitektur _Three Tree_ yaitu terdiri dari:
     - ```git reset --soft <Hash_yang_dituju>``` : memindahkan HEAD, namun tidak merubah Working Directory dan Staging Index
     - ```git reset --mixed <Hash_yang_dituju>``` : memindahkan HEAD dan mengubah Staging Index sama dengan Repository, namun tidak merubah Working Directory
     - ```git reset --hard <Hash_yang_dituju>``` : memindahkan HEAD dan mengubah Working Directory dan Staging Index seperti Repository
+* ```git commit --amend -m "<informasi mengenai perubahan apa saja yang dilakukan>"``` : mengubah HEAD dengan cara menghapus HEAD sebelumnya secara ```--soft```, kemudian commit ulang
+*note: Perbedaan RESET dan CHECKOUT adalah jika reset, commit setelahnya bener-bener di hapus, kalau checkout kita hanya melihat/mengambil isi dari commit tertentu, tanpa menghapus commit manapun
+* ```git checkout <Hash>``` : melihat/mengambil semua file dari versi sebelumnya sesuai hash yang dimasukkan
+* ```git checkout <Hash> -- <nama_file>.<format_file>``` : melihat file tertentu pada versi sebelumnya sesuai hash yang dimasukkan. Teknisnya, git akan meletakkan file tersebut ke dalam Staging Area.
+* ```git checkout <nama_branch>``` : untuk mengembalikan lagi ke kondisi HEAD.
+* ```git branch --show-current``` : menampilkan nama branch yang sedang digunakan
+* ```git revert <Hash>``` : mengembalikan repository ke versi sebelumnya sesuai Hash yang dimasukkan, dengan cara menambah commit. Sehingga history commit tetap aman. Ini adalah keblikan dari reset.
+
+
+# GIT - MATERI BRANCING
+## Penggunaan
+* saat ragu dalam menambah/mengubah fitur yang masih belum yakin implementasinya
+* saat mengerjakan proyek secara team
