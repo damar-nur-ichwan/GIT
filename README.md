@@ -48,4 +48,8 @@ Git menerapkan arsitektur _Three Tree_ yaitu terdiri dari:
 * ```git show <Hash>``` : melihat detail perubahan dari commit tertentu
 * ```git show HEAD``` : melihat detail dari commit terakhir
 * ```git diff <Hash_1> <Hash_2>``` : membandingkan antar commit
-* *note: Rename file adalah proses delete file, kemdian membuat file baru dengan nama baru dengan isi yang sama.
+*note: Rename file adalah proses delete file, kemdian membuat file baru dengan nama baru dengan isi yang sama.
+* GIT Reset : mengembalikan repository ke versi sebelumnya. Maka, versi sebelumnya yang dituju tersebut menjadi versi terupdate, sehingga versi setelahnya terhapus.
+    - ```git reset --soft <Hash_yang_dituju>``` : memindahkan HEAD, namun tidak merubah Working Directory dan Staging Index
+    - ```git reset --mixed <Hash_yang_dituju>``` : memindahkan HEAD dan mengubah Staging Index sama dengan Repository, namun tidak merubah Working Directory
+    - ```git reset --hard <Hash_yang_dituju>``` : memindahkan HEAD dan mengubah Working Directory dan Staging Index seperti Repository
