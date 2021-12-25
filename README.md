@@ -95,9 +95,10 @@ Contoh:
 # GIT BRANCE
 * _Master/Main Branch_ : branch utama untuk meletakkan file-file yang sudah sesuai dengan tujuan
 * Dengan adanya branche, maka pengerjaan proyek dalam repository berjalan sistematis, tanpa mengganggu master/main branch.
+* Sebuah branch paling tidak mewakili perubahan sebuah file.
 ## Penggunaan
-* saat ragu dalam menambah/mengubah fitur yang masih belum yakin implementasinya
-* saat mengerjakan proyek secara team
+* Saat ragu dalam menambah/mengubah fitur yang masih belum yakin implementasinya
+* Saat mengerjakan proyek secara team
 
 # GIT FORK
 ## Fungsi
