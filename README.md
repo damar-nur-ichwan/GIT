@@ -51,7 +51,7 @@ Git menerapkan arsitektur _Three Tree_ yaitu terdiri dari:
     ```
 ## Membuat Alias
 ```
-git config --global alias.<alias_yang_diinginkan> <perintah_defaultnya>
+git config --global alias.<alias_yang_diinginkan> <perintah>
 ```
 Contoh: 
 1. 'commit' menjadi cukup diketik 'com'
@@ -66,6 +66,7 @@ Contoh:
 
 ## Kode-kode Perintah Lain dalam Git:
 * ```git add <nama_file>.<format_file>``` : untuk memasukkan file dari Working Directory ke Staging Area
+* ```git add .``` : untuk memasukkan seluruh perubahan yg terdeteksi di Working Directory ke Staging Area
 * ```git commit -m "<informasi mengenai perubahan apa saja yang dilakukan>"``` : untuk menyimpan seluruh file dari Staging Area ke Repository
 * ```git status``` : untuk melihat perubahan dan aktivitas apa saja yang terjadi di dalam folder proyek
 * ```git clean -f``` : untuk membatalkan semua perubahan dalam Working Directory
@@ -87,7 +88,7 @@ Contoh:
 *note: Perbedaan RESET dan CHECKOUT adalah jika reset, commit setelahnya bener-bener di hapus, kalau checkout kita hanya melihat/mengambil isi dari commit tertentu, tanpa menghapus commit manapun
 * ```git checkout <Hash>``` : melihat/mengambil semua file dari versi sebelumnya sesuai hash yang dimasukkan
 * ```git checkout <Hash> -- <nama_file>.<format_file>``` : melihat file tertentu pada versi sebelumnya sesuai hash yang dimasukkan. Teknisnya, git akan meletakkan file tersebut ke dalam Staging Area.
-* ```git checkout <nama_branch>``` : untuk mengembalikan lagi ke kondisi HEAD.
+* ```git checkout <nama_branch>``` : untuk mengembalikan lagi ke HEAD pada branch setelah melakukan 'checkout Hash'. Perintah ini juga digunakan untuk berpindah Branch
 * ```git branch --show-current``` : menampilkan nama branch yang sedang digunakan
 * ```git revert <Hash>``` : mengembalikan repository ke versi sebelumnya sesuai Hash yang dimasukkan, dengan cara menambah commit. Sehingga history commit tetap aman. Ini adalah keblikan dari reset.
 
@@ -99,6 +100,10 @@ Contoh:
 ## Penggunaan
 * Saat ragu dalam menambah/mengubah fitur yang masih belum yakin implementasinya
 * Saat mengerjakan proyek secara team
+## Perintah
+* ```git branch``` : menampilkan daftar branch yang ada
+* ```git branch <nama_branch_yang_akan_dibuat>``` : membuat branch baru
+* 
 
 # GIT FORK
 ## Fungsi
