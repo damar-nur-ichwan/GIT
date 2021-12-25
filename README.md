@@ -93,6 +93,14 @@ Contoh:
 
 
 # GIT BRANCE
+* _Master/Main Branch_ : branch utama untuk meletakkan file-file yang sudah sesuai dengan tujuan
+* Dengan adanya branche, maka pengerjaan proyek dalam repository berjalan sistematis, tanpa mengganggu master/main branch.
 ## Penggunaan
 * saat ragu dalam menambah/mengubah fitur yang masih belum yakin implementasinya
 * saat mengerjakan proyek secara team
+
+# GIT FORK
+## Fungsi
+* Menduplikat Repository (beserta semua history-nya) dari akun orang lain ke akun pribadi. 
+* Dengan Fork, maka Repository yang kita duplikat akan mengandung credit dari mana Repositori ini berasal.
+* Perbedaan dengan _clone_, clone hanya menduplikat repository yang terakhir tanpa informasi history apapun dan creditnya
