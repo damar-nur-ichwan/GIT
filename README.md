@@ -86,9 +86,10 @@ Contoh:
     - ```git reset --hard <Hash_yang_dituju>``` : memindahkan HEAD dan mengubah Working Directory dan Staging Index seperti Repository
 * ```git commit --amend -m "<informasi mengenai perubahan apa saja yang dilakukan>"``` : mengubah HEAD dengan cara menghapus HEAD sebelumnya secara ```--soft```, kemudian commit ulang
 *note: Perbedaan RESET dan CHECKOUT adalah jika reset, commit setelahnya bener-bener di hapus, kalau checkout kita hanya melihat/mengambil isi dari commit tertentu, tanpa menghapus commit manapun
-* ```git checkout <Hash>``` : melihat/mengambil semua file dari versi sebelumnya sesuai hash yang dimasukkan
-* ```git checkout <Hash> -- <nama_file>.<format_file>``` : melihat file tertentu pada versi sebelumnya sesuai hash yang dimasukkan. Teknisnya, git akan meletakkan file tersebut ke dalam Staging Area.
-* ```git checkout <nama_branch>``` : untuk mengembalikan lagi ke HEAD pada branch setelah melakukan 'checkout Hash'. Perintah ini juga digunakan untuk berpindah Branch
+* DETACHED MODE: untuk melihat/mengambil file/repository pada commit tertentu
+    ```git checkout <Hash>``` : melihat/mengambil semua file dari versi sebelumnya sesuai hash yang dimasukkan
+    ```git checkout <Hash> -- <nama_file>.<format_file>``` : melihat file tertentu pada versi sebelumnya sesuai hash yang dimasukkan. Teknisnya, git akan meletakkan file tersebut ke dalam Staging Area.
+* ```git checkout <nama_branch>``` : untuk mengembalikan lagi ke HEAD pada branch setelah melakukan 'DETACHED MODE'. Perintah ini juga digunakan untuk berpindah Branch
 * ```git branch --show-current``` : menampilkan nama branch yang sedang digunakan
 * ```git revert <Hash>``` : mengembalikan repository ke versi sebelumnya sesuai Hash yang dimasukkan, dengan cara menambah commit. Sehingga history commit tetap aman. Ini adalah keblikan dari reset.
 
