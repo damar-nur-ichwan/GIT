@@ -111,3 +111,12 @@ Contoh:
 * Menduplikat Repository (beserta semua history-nya) dari akun orang lain ke akun pribadi. 
 * Dengan Fork, maka Repository yang kita duplikat akan mengandung credit dari mana Repositori ini berasal.
 * Perbedaan dengan _clone_, clone hanya menduplikat repository yang terakhir tanpa informasi history apapun dan creditnya
+
+# GIT REMOTE
+Remote bisa dikatakan sebagai pipa penghubung yang digunakan untuk mensingkronikasi antara repository cloning dengan repository centralnya. Jadi kalau repositori centralnya ada update, maka repository cloning akan terupdate juga
+## Perintah
+* ```git push``` : untuk mengupload perubahan ke repository asli
+* ```git clone <path atau url>``` : untuk menduplikasi repository secara cloning
+* ```git remote``` : melihat remote existing
+* ```git remote -v``` : melihat remote existing beserta  methode apa saja yang bisa digunakan di masing-masing remote
+* ```git remote add <nama remote> <path/url dari Central Repository> && git push -u <nama remote> <nama branch di local> : untuk menambahkan remote dan menyamakan dengan repository di Central Repository
