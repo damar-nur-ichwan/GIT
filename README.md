@@ -119,4 +119,4 @@ Remote bisa dikatakan sebagai pipa penghubung yang digunakan untuk mensingkronik
 * ```git clone <path atau url>``` : untuk menduplikasi repository secara cloning
 * ```git remote``` : melihat remote existing
 * ```git remote -v``` : melihat remote existing beserta  methode apa saja yang bisa digunakan di masing-masing remote
-* ```git remote add <nama remote> <path/url dari Central Repository> && git push -u <nama remote> <nama branch di local> : untuk menambahkan remote dan menyamakan dengan repository di Central Repository
+* ```git remote add <nama remote> <path/url dari Central Repository> && git push -u <nama remote> <nama branch di local>``` : untuk menambahkan remote dan menyamakan antara Repository Local dengan Central Repository yang sebelumnya sudah di buat (kosong)
