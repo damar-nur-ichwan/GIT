@@ -120,3 +120,15 @@ Remote bisa dikatakan sebagai pipa penghubung yang digunakan untuk mensingkronik
 * ```git remote``` : melihat remote existing
 * ```git remote -v``` : melihat remote existing beserta  methode apa saja yang bisa digunakan di masing-masing remote
 * ```git remote add <nama remote> <path/url dari Central Repository> && git push -u <nama remote> <nama branch di local>``` : untuk menambahkan remote dan menyamakan antara Repository Local dengan Central Repository yang sebelumnya sudah di buat (kosong)
+
+# GITHUB PAGES
+Github Pages adalah tools yang digunakan sebagai hosting gratis, khusus untuk website sederhana
+## Halaman Utama
+* Pastikan file utama website bernama ```index.html```, supaya bisa langsung tampil
+* Buat repository dengan nama ```<username github>.github.io```
+* Begitu code program dari website yang dibuat sudah benar, serta disimpan dalam repository github, maka bisa langsung di akses melalui browser manapun ke ```<usename github>.github.io```
+## Menambahkan Pages
+1. Buka repository dari program website yang telah dibuat
+2. Tekan **Settings**, lalu scroll down.
+3. Pada area **Github Pages**, pilih branch yang mana yang mau ditambahkan ke Github Pages, dengan cara mengubah ```none``` pada bagian **source** ke branch yang diinginkan.
+4. Website baru berhasil ditambahkan. Silakan akes melalui browser ke ```<usename github>.github.io/<nama repository yang sudah ditambahkan tadi>```
